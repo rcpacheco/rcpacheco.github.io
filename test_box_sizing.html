@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Test for Box-sizing</title>
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/css/ui.jqgrid.css">
+        <style>
+            .style_label {
+                background-color: lightskyblue !important;
+            }
+            .style_cell {
+                background-color: #66FFFF !important;  
+            }
+            .ui-jqgrid tr.footrow-ltr td{
+                background-color: gold !important;  
+            }
+            .ui-jqgrid .ui-jqgrid-bdiv {
+                overflow-y: scroll;
+            }            
+        </style>
+    </head>
+    <body>
+        <div>
+            <table id="grid"></table>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/js/i18n/grid.locale-en.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/js/jquery.jqgrid.min.js"></script>
+        <script type='text/javascript'>
+
+            var options = {
+                "caption": "Test for Box-sizing inherit problem (#155)",
+                "cellsubmit": "remote",
+                "cellEdit": false,
+                "cmTemplate": {
+                    "title": false
+                },
+                "datatype": "json",
+                "emptyrecords": "Registros vacios",
+                "height": (20 * 22),
+                "hidegrid": false,
+                "loadonce": true,
+                "pager": "contenidoPager",
+                "pgbuttons": false,
+                "pgtext": "",
+                "rownumbers": true,
+                "shrinkToFit": false,
+                "url": "https://gist.githubusercontent.com/rcpacheco/ccdd5e003c6cc16a955a/raw/289d3c06b67a1fe5e09d101a5a38e11426e3a4e2/products.json",
+                "viewrecords": true,
+                "multiSort": true,
+                "colModel": [
+                    {
+                        "frozen": false,
+                        "label": "Id",
+                        "name": "id",
+                        "hidden": true
+                    },
+                    {
+                        "frozen": false,
+                        "classes": "style_label",
+                        "align": "left",
+                        "sorttype": "text",
+                        "label": "Code",
+                        "name": "code",
+                        "width": "80"
+                    },
+                    {
+                        "frozen": false,
+                        "classes": "style_label",
+                        "align": "center",
+                        "sorttype": "text",
+                        "label": "Description",
+                        "name": "description",
+                        "width": "150"
+                    },
+                    {
+                        "frozen": false,
+                        "classes": "style_cell",
+                        "align": "right",
+                        "sorttype": "number",
+                        "formatter": "number",
+                        "label": "%Eficiency",
+                        "name": "eficiency",
+                        "width": "90"
+                    },
+                    {
+                        "frozen": false,
+                        "classes": "style_cell",
+                        "align": "right",
+                        "sorttype": "integer",
+                        "formatter": "integer",
+                        "label": "Policy",
+                        "name": "policy",
+                        "width": "70"
+                    },
+                    {
+                        "frozen": false,
+                        "classes": "style_cell",
+                        "align": "right",
+                        "sorttype": "number",
+                        "formatter": "number",
+                        "label": "Stock",
+                        "name": "stock",
+                        "width": "100"
+                    }
+                ],
+                "footerrow": true,
+                "width": (30 + 80 + 150 + 90 + 70 + 100 + 17)
+            };
+            var summary = {
+                "description": "Total:",
+                "eficiency": 41335.9,
+                "policy": 0,
+                "stock": 5920372.839999995
+            };
+            $('#grid').jqGrid(this.options).footerData("set", summary);
+        </script>
+    </body>
+</html>
