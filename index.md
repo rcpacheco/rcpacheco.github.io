@@ -3,9 +3,9 @@ Blog Ricardo Pacheco
 
 ###Motivation
 
-This blog contains information regardin my peronal interests. I share the code in this repositories with the intention to contribute back to the open source community.
+This blog contains information regarding my personal interests. I share the code in this repositories with the intention to contribute back to the open source community.
 
-I will publish the work under an MIT licence so that you can use freely the code. 
+I will publish the work under an MIT licence so that you can use freely the code.
 
  
 ###[100DaysOfCode](https://github.com/rcpacheco/100-days-of-code).
