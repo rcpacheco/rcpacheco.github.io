@@ -1,15 +1,12 @@
-# Inicio
+# Home
 
-[Muestrario](..)
-
-
-[Plantillas]()
+[Templates]()
 
   * [HTML](info/dummy.html)
 
-[Ejemplos](info/ejemplos.md)
+[Examples](info/ejemplos.md)
 
-[Código]()
+[Code]()
 
   * [Dummy CSS](info/dummy.css)
   * [Dummy JS](info/dummy.js)
