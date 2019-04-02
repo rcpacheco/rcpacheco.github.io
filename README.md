@@ -1,2 +1,2 @@
 # rcpacheco.github.io
-Projects Blog
+Welcome to Ricardo Pacheco's personal Blog
