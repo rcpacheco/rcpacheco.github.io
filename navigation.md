@@ -11,4 +11,4 @@
   * [Dummy CSS](info/dummy.css)
   * [Dummy JS](info/dummy.js)
 
-[Sintaxis](markdown.md)
+[Markdown Syntax](markdown.md)
